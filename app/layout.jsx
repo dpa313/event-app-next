@@ -1,6 +1,6 @@
-import { Poppins, Caveat} from "next/font/google";
+import { Poppins, Caveat } from "next/font/google";
 import "./globals.css";
-
+import EventProvider from "@/context/EventContext";
 
 export const metadata = {
   title: "Create Next App",
@@ -8,24 +8,24 @@ export const metadata = {
 };
 
 const poppins = Poppins({
-  weight: ["100","200","300","400","500","600","700","800","900"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
-  variable: "--font-poppins"
-})
+  variable: "--font-poppins",
+});
 const caveat = Caveat({
-  weight: ["400","500","600","700"],
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
-  variable: "--font-caveat"
-})
+  variable: "--font-caveat",
+});
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${poppins.variable} ${caveat.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <EventProvider>
+      <html lang="en">
+        <body className={`${poppins.variable} ${caveat.variable} antialiased`}>
+          {children}
+        </body>
+      </html>
+    </EventProvider>
   );
 }

@@ -1,8 +1,16 @@
-import React from 'react'
+"use client"
+
+import Searchbar from "@/components/Searchbar/Searchbar"
+import { EventContext } from "@/context/EventContext"
+import { useContext } from "react"
 
 const Home = () => {
+  const {events} = useContext(EventContext)
+  console.log(events);
   return (
-    <div className="h1">Home</div>
+    <div className="">
+      <Searchbar/>
+    </div>
   )
 }
 
