@@ -7,7 +7,7 @@ const SkeletonGrid = ({itemCount}) => {
     <div className="grid grid-cols-1 xl:grid-cols-4 gap-[30px] mb-32">
       {Array.from({ length: itemCount }).map((_, index) => {
         return (
-          <div className="flex flex-col space-y-3">
+          <div key={index} className="flex flex-col space-y-3">
             <Skeleton className="h-[225px] rounded-xl" />
             <div className="space-y-2">
               <Skeleton className="h-4" />
