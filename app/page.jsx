@@ -1,5 +1,6 @@
 "use client";
 
+import DownloadApp from "@/components/DownloadApp";
 import EventList from "@/components/Events/EventList";
 import Hero from "@/components/Hero";
 import RecomendedEvents from "@/components/RecomendedEvents";
@@ -21,7 +22,7 @@ const Home = () => {
         <div>
           <div className="container mx-auto">
             <UpcommingEvents/>
-            <div>download app section</div>
+            <DownloadApp/>
             <RecomendedEvents/>
           </div>
         </div>
