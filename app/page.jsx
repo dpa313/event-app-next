@@ -2,6 +2,7 @@
 
 import EventList from "@/components/Events/EventList";
 import Hero from "@/components/Hero";
+import RecomendedEvents from "@/components/RecomendedEvents";
 import UpcommingEvents from "@/components/UpcommingEvents";
 import { EventContext } from "@/context/EventContext";
 import { useContext, useEffect } from "react";
@@ -21,7 +22,7 @@ const Home = () => {
           <div className="container mx-auto">
             <UpcommingEvents/>
             <div>download app section</div>
-            <div>recomended events slider</div>
+            <RecomendedEvents/>
           </div>
         </div>
       )}
