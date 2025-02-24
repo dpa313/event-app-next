@@ -91,6 +91,12 @@ const EventProvider = ({ children }) => {
     setSelectedDate(null);
     setSelectedType("")
   };
+
+  const formatDate = (dateString) =>{
+    const date = new Date(dateString)
+    const options = {weekday: "short", month: "short", day: "numeric"}
+    return date.toLocaleDateString("en-US", options)
+  }
   return (
     <EventContext.Provider
       value={{
@@ -108,7 +114,8 @@ const EventProvider = ({ children }) => {
         selectedDate,
         setSelectedDate,
         selectedType,
-        setSelectedType
+        setSelectedType,
+        formatDate
       }}
     >
       {children}
