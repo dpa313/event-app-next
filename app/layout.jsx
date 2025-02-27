@@ -3,6 +3,7 @@ import "./globals.css";
 import EventProvider from "@/context/EventContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TicketProvider from "@/context/TicketContext";
 
 export const metadata = {
   title: "Create Next App",
@@ -23,13 +24,17 @@ const caveat = Caveat({
 export default function RootLayout({ children }) {
   return (
     <EventProvider>
-      <html lang="en">
-        <body className={`${poppins.variable} ${caveat.variable} antialiased`}>
-          <Header/>
-          {children}
-          <Footer/>
-        </body>
-      </html>
+      <TicketProvider>
+        <html lang="en">
+          <body
+            className={`${poppins.variable} ${caveat.variable} antialiased`}
+          >
+            <Header />
+            {children}
+            <Footer />
+          </body>
+        </html>
+      </TicketProvider>
     </EventProvider>
   );
 }

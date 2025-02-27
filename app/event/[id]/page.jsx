@@ -1,3 +1,4 @@
+import BuyTicket from "@/components/BuyTicket";
 import CustomSelect from "@/components/CustomSelect";
 import EventSchedule from "@/components/EventSchedule";
 import Timer from "@/components/Timer";
@@ -36,7 +37,7 @@ const EventDetails = async ({ params }) => {
                 </div>
                 <Timer event={event}/>
                 <CustomSelect event={event}/>
-                <div>by ticket btn</div>
+                <BuyTicket event={event}/>
             </div>
           </div>
           <div className="flex flex-col xl:flex-row gap-8 xl:gap-24">

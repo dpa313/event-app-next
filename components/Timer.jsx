@@ -4,11 +4,11 @@ import React, { useEffect, useState } from "react";
 const Timer = ({ event }) => {
   //calculate the target event date and time
   const eventDate = new Date(`${event.date}T${event.hour}`);
-  console.log(eventDate);
+  // console.log(eventDate);
 
   // state to tract the remaining time in miliseconds
   const [timeRemaining, setTimeRemaining] = useState(eventDate - new Date());
-  console.log(timeRemaining);
+  // console.log(timeRemaining);
 
   // handle the countdown logic
   useEffect(() => {
@@ -40,7 +40,7 @@ const Timer = ({ event }) => {
   );
   const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-  console.log(days, hours, minutes, seconds);
+  // console.log(days, hours, minutes, seconds);
 
   return (
     <div className="flex flex-wrap gap-4">

@@ -24,11 +24,11 @@ const EventProvider = ({ children }) => {
   // filter events based on the applied filter
   const filterEvents = useMemo(() => {
     const today = new Date();
-    console.log(today);
+    // console.log(today);
     return events.filter((event) => {
       // check event date (exclude past events)
       const eventDate = new Date(event.date);
-      console.log(eventDate);
+      // console.log(eventDate);
       if (eventDate < today) return false;
       // check search item
       const matchesSearch = appliedFilter.searchTerm
@@ -48,7 +48,7 @@ const EventProvider = ({ children }) => {
       //check type
       const matchesType = appliedFilter.selectedType? event.type.toLowerCase() === appliedFilter.selectedType.toLowerCase() : true 
 
-      console.log(matchesDate);
+      // console.log(matchesDate);
 
       return matchesSearch && matchesLocations && matchesDate && matchesType;
     });

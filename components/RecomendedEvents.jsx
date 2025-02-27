@@ -34,7 +34,7 @@ const RecomendedEvents = () => {
         className="w-full h-[500px]">
           {filterRecomendedEvents.map((event,index)=>(
             <SwiperSlide key={index} className="select-none">
-              <Link href={"/"}>
+              <Link href={`/event/${event.id}`}>
                 <Event event={event}/>
               </Link>
             </SwiperSlide>
