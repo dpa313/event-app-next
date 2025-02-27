@@ -1,6 +1,7 @@
 import BuyTicket from "@/components/BuyTicket";
 import CustomSelect from "@/components/CustomSelect";
 import EventSchedule from "@/components/EventSchedule";
+import Organizers from "@/components/Organizers";
 import Timer from "@/components/Timer";
 import Image from "next/image";
 import {FaRegCircleCheck} from 'react-icons/fa6'
@@ -65,7 +66,9 @@ const EventDetails = async ({ params }) => {
                 </ul>
               </div>
             </div>
-            <div className="w-full max-w-[460px]">organizers</div>
+            <div className="w-full max-w-[460px]">
+              <Organizers event={event}/>
+            </div>
           </div>
         </div>
       </div>
